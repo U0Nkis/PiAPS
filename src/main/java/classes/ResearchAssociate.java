@@ -1,42 +1,22 @@
 package classes;
 
-import classes.Employee;
-
 public class ResearchAssociate extends Employee {
+	private String fieldOfStudy;
 
-	protected String fieldOfStudy;
-	protected Project[] projects;
-
-	public ResearchAssociate(int ssNo, String name, String fieldOfStudy) {
-		this.ssNo = ssNo;
-		this.name = name;
+	public ResearchAssociate(int ssn, String name, String email, String fieldOfStudy) {
+		super(ssn, name, email);
 		this.fieldOfStudy = fieldOfStudy;
+	}
+
+	public ResearchAssociate() {
+		super();
 	}
 
 	public String getFieldOfStudy() {
-		return this.fieldOfStudy;
+		return fieldOfStudy;
 	}
 
-	public void setFieldOfStudy(String fieldOfStudy) {
+	public void setFieldOfStudy (String fieldOfStudy) {
 		this.fieldOfStudy = fieldOfStudy;
 	}
-
-	public Project[] getProjects() {
-		return this.projects;
-	}
-
-	public void setProjects(Project[] projects) {
-		this.projects = projects;
-	}
-
-	public void startProject(Project project) {
-		// TODO - implement ResearchAssociate.startProject
-		throw new UnsupportedOperationException();
-	}
-
-	public void finishProject(Project project) {
-		// TODO - implement ResearchAssociate.finishProject
-		throw new UnsupportedOperationException();
-	}
-
 }
